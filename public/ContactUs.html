@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+
+
+
+
+<!-- JS file -->
+
+
+
+
+<!-- JS files - end  -->
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="ContactUs.css">
+
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        <li><a href="VolenteerSignUp.html">הרשמה למתנדבים</a></li>
+        <li><a href="OldmanSignUp.html">הרשמה לקשישים</a></li>
+        <li id="Hometitle"><a href="index.html">בית</a></li>
+       
+ </nav>
+ <br>
+ <br>
+ <div id="numReq"></div>
+ <br>
+</div>
+
+<div>
+<button onclick="signOut()" id="signOut"> התנתק </button>
+</div>
+
+<br>
+
+
+
+  <form class="MainForm">
+      <label for="Phone">טלפון</label><br>
+      <input type="text" name="Phone" id="Phone"><br>
+      <label for="firstName">שם פרטי</label><br>
+      <input type="text" name="firstName" id="firstName"><br>
+      <label for="lastName">שם משפחה</label><br>
+      <input type="text" name="lastName" id="lastName"><br>  
+      <label for="Email">אימייל</label><br>
+      <input type="text" name="Email" id="Email"><br>
+
+
+
+      <fieldset id="forms__textareas">
+        <legend>מה תרצה לרשום לנו ?</legend>
+        <p>
+          <label for="Msg">הודעה : </label>
+          <textarea id="Msg" rows="8" cols="48" placeholder="אנא הכנס הודעה כאן.."></textarea>
+        </p>
+      </fieldset>
+
+
+      <button id="addBtn" class="btn waves-effect waves-light">שלח</button>
+      
+    
+  </form>
+
+
+
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="ContactUsJS.js"></script>
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+</body>
+</html>

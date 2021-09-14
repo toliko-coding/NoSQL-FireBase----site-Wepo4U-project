@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CooseVolenteer</title>
+
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+    <!-- LOGO -->
+    <div class="Logo">
+        <img src="Logo.png" alt="">
+    </div>
+
+    <br>
+
+    <!-- NAV - BAR -->
+    <div class="contain">
+
+        <nav>
+            <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+            <li><a href="ContactUs.html">צור קשר</a ></li>
+                <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+                <li><a href="BusinessPage.html">עסקים</a></li>
+                <li><a href="VolenteerEnter.html">הפרופיל שלי </a></li>
+
+        </nav>
+        <br>
+        <br>
+        <br>
+    </div>
+    <button onclick="signOut()" id="singIp"> התנתק </button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div  class="control-group1" >
+     
+        <h1 >בחר איזור</h1>
+        <label class="control control--radio">כל הארץ
+            <input id="כל הארץ" type="radio" name="radio1" checked="checked" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור הצפון
+            <input id="איזור הצפון" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור חיפה
+            <input id="איזור חיפה" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור השרון
+            <input value="toligay" id="איזור השרון" type="radio" name="radio1" />
+            <div class="control__indicator" ></div>
+        </label>
+        <label class="control control--radio">איזור ירושלים והסביבה
+            <input id="איזור ירושלים והסביבה" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור באר שבע והסביבה
+            <input id="איזור באר שבע והסביבה" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור הערבה
+            <input id="איזור הערבה" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">איזור אילת
+            <input id="איזור אילת" type="radio" name="radio1" />
+            <div class="control__indicator"></div>
+        </label>
+
+
+
+
+
+
+
+    </div>
+    <div class="control-group2">
+        <h1>בחר שעת התנדבות </h1>
+        
+        <label class="control control--radio">שעות הבוקר 8:00-12:00
+            <input id="שעות הבוקר 8:00 - 12:00" type="radio" name="radio2" checked="checked" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">12:00-17:00 שעת צהריים
+            <input id="12:00-17:00 שעת צהריים" type="radio" name="radio2" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">17:00--21:00 שעות אחה"צ-ערב
+            <input id="17:00--21:00 שעות אחה"צ-ערב" type="radio" name="radio2" />
+            <div class="control__indicator"></div>
+        </label>
+    </div>
+
+    <div class="control-group3">
+        <h1>בחר את סוג ההתנדבות </h1>
+        <label class="control control--radio">קניית מצרכים
+            <input id="קניית מצרכים" type="radio" name="radio3" checked="checked" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio"> קניית תרופות
+            <input id="קניית תרופות" type="radio" name="radio3" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">דוגיסיטר
+            <input id="דוגיסיטר" type="radio" name="radio3" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">תחזוקה או שיפוץ
+            <input  id="תחזוקה או שיפוץ" type="radio" name="radio3" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">הסעות
+            <input id="הסעות" type="radio" name="radio3" />
+            <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">מחשבים/אינטרנט
+            <input id="מחשבים/אינטרנט" type="radio" name="radio3" />
+            <div class="control__indicator"></div>
+        </label>
+
+        <button class="button" onclick="catchitems()">הגש התנדבות</button>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- FIREBASE -------------------------------------------------------------------------------------->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+            authDomain: "wepo4u-team-22.firebaseapp.com",
+            projectId: "wepo4u-team-22",
+            storageBucket: "wepo4u-team-22.appspot.com",
+            messagingSenderId: "854120996905",
+            appId: "1:854120996905:web:4c6ec454ae611005797c38",
+            measurementId: "G-R8XJ878M82"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+    <!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+    <!-- JS file -->
+
+    <script src="ChooseVolJS.js"></script>
+
+
+    <!-- JS files - end  -->
+
+
+    <!-- CSS fiels -->
+    <link rel="stylesheet" href="ChooseVol.css">
+
+
+    <!-- CSS fiels  end -->
+</body>
+
+</html>

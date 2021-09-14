@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth()
+const database = firebase.database()
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="VolenteerSurveyJS.js"></script>
+
+
+<!-- JS files - end  -->
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="VolenteerSurvey.css">
+
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+    <li><a href="ContactUs.html">צור קשר</a ></li>
+      <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+      <li><a href="BusinessPage.html">עסקים</a></li>
+      
+      <li><a href="OldmanEnter.html">הפרופיל שלי </a></li>
+       
+ </nav>
+ 
+</div>
+<br>
+<br>
+<br>
+<br>
+<div id="numReq"></div>
+<hr>
+<br>
+
+<div id="counter">
+  
+</div>
+
+
+<div id="outside">
+    <form class="form1"  id="survey-form" action="/my-handling-form-page" method="post">
+      <h1 id="title">איך היית מסכם את חוויות ההתנדבות אצלנו?</h1>
+      
+    
+        <!-- ------------------Radio Buttons-------------------------------- -->
+    
+    
+      <fieldset >
+          <div class="sat1">
+          <label  for="Satisfection1">באיזו מידה היה המתנדב ידידותי?</label>
+          <p>
+            <input type="radio" name="gender1" value="במידה רבה מאוד" checked>במידה רבה מאוד <br>
+            <input type="radio" name="gender1" value="מידה רבה"> במידה רבה<br>
+            <input type="radio" name="gender1" value="במידה בינונית"> במידה בינונית<br>
+            <input type="radio" name="gender1" value="במידה מועטה"> במידה מועטה<br>
+            <input type="radio" name="gender1" value="בכלל לא"> בכלל לא
+              
+          </p>
+        </div>
+      </fieldset>
+    
+      
+      <fieldset>
+          <div class="sat1">
+        <label for="Satisfection2">באיזו מידה המתנדב עמד בזמנים?</label>
+        <p>
+          <input type="radio" name="gender2" value="במידה רבה מאוד" checked>במידה רבה מאוד <br>
+          <input type="radio" name="gender2" value="מידה רבה"> במידה רבה<br>
+          <input type="radio" name="gender2" value="במידה בינונית"> במידה בינונית<br>
+          <input type="radio" name="gender2" value="במידה מועטה"> במידה מועטה<br>
+          <input type="radio" name="gender2" value="בכלל לא"> בכלל לא
+            
+        </p>
+        </div>
+      </fieldset>
+      <fieldset>
+          <div class="sat1">
+        <label for="Satisfection3">באיזו מידה המתנדב ביצע את משימתו?</label>
+        <p>
+          <input type="radio" name="gender3" value="במידה רבה מאוד" checked>במידה רבה מאוד <br>
+          <input type="radio" name="gender3" value="מידה רבה"> במידה רבה<br>
+          <input type="radio" name="gender3" value="במידה בינונית"> במידה בינונית<br>
+          <input type="radio" name="gender3" value="במידה מועטה"> במידה מועטה<br>
+          <input type="radio" name="gender3" value="בכלל לא"> בכלל לא
+            
+        </p>
+    </div>
+      </fieldset>
+    
+      <!-- ------------------Checkboxes-------------------------------- -->
+      <fieldset>
+          <div class="sat1">
+        <label for="Gender"></label>
+        <p>
+          <input type="checkbox" id="check1" value="הייתי ממליץ על המתנדב"> היתי ממליץ על המתנדב<br>
+          <input type="checkbox" id="check2" value="מאוד נהנתי! אני ארצה לחזור לשימוש נוסף"> מאוד נהנתי!אני ארצה לחזור לשימוש נוסף<br>
+          <input type="checkbox" id="check3" value="הייתי ממליץ על האתר" > הייתי ממליץ על האתר<br>
+          <input type="checkbox" id="check4" value="הייתי רוצה לקבל עדכונים ופרסומות למייל" checked> הייתי רוצה לקבל עדכונים ופרסומות למייל<br>
+        </p>
+    </div>
+      </fieldset>
+      
+
+    
+      <!-- --------------------Text Areas------------------------------ -->
+      
+      <fieldset>
+        <legend>שאלון פתוח</legend>
+        <div >
+          <label for="expi"></label>
+          <p> בבקשה ספר לנו על החוויה שלך לאחר השימוש באתר שלנו</p>
+          <label for="Msg">הודעה : </label>
+          <textarea  id="Msg" name="user_message1" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+          
+          <label for="tips">הצעות לשיפור/יעול?</label><br>
+          <textarea  id="tips" name="user_message2" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   </div>
+        <p>אם יש תמונות אפשר להוסיף כאן:
+          <button>צרף קבצים</button></p>
+      </fieldset>
+    
+     
+   
+        
+    </form>
+      </div>
+     
+      <button onclick="submitt()" id="subbutton" class="button">שלח סקר</button>
+
+</body>
+</html>

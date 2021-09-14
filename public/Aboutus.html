@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth()
+const database = firebase.database()
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="index.js"></script>
+
+
+<!-- JS files - end  -->
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="HomePage.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<body id="myPage" >
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        <li><a href="VolenteerSignUp.html">הרשמה למתנדבים</a></li>
+        <li><a href="OldmanSignUp.html">הרשמה לקשישים</a></li>
+        <li id="Hometitle"><a href="index.html">בית</a></li>
+       
+ </nav>
+ 
+</div>
+<!-- #region ---------------------------------------------------------->
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+    
+    </p>
+    
+    <div class="w3-row"><br>
+    
+    <div class="w3-quarter">
+      <img src="adel.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>אדל קינן</h3>
+      <p>adelke@ac.sce.ac.il</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="boaz.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>בועז ביטון</h3>
+      <p>boaz2119@ac.sce.ac.il</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="almog.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>אלמוג אפרת אוחיון</h3>
+      <p>almogoh@ac.sce.ac.il</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="tolii.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>אנטולי קוט</h3>
+      <p>anatoko@ac.sce.ac.il</p>
+    </div>
+    
+    </div>
+    </div>
+    
+    <!-- Work Row -->
+    <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+    
+    <div class="w3-quarter">
+    <h2>?מי אנחנו והמטרות שלנו</h2>
+    <p> .אנחנו ארבע סטודנטים שנה שנייה בהנדסת תוכנה כחלק מהפרויקט שלנו בקורס לקחנו על עצמנו לבנות את האתר הזה כעזרה לקשישים בתקופת הקורונה, קשישים יוכלו להנות מעזרה ומחברה של המתנדבים שלנו, המתנדבים עצמם ירגישו תחושפ סיפוק וערך עצמי בנוסף להטבה שתגיע להם עם סיום ההתנדבות. וכמובן שחשבנו גם על מצבם של העסקים הקטנים שנמצאים במשבר בתקופה זו , אנחנו בעצם נקדם אותם ע"י ההטבות שהם יתנו לנו לתת למתנדבים וכך כולם יוצאים מורווחים..</p>
+    </div>
+    
+    <div class="w3-quarter">
+    <div class="w3-card w3-white">
+      <img src="olde.jpeg" alt="Snow" style="width:100%">
+      <div class="w3-container">
+     
+    
+      
+      </div>
+      </div>
+    </div>
+    
+    <div class="w3-quarter">
+    <div class="w3-card w3-white">
+      <img src="oldiii.jpeg" alt="Lights" style="width:100%">
+      <div class="w3-container">
+     
+      </div>
+      </div>
+    </div>
+    
+    <div class="w3-quarter">
+    <div class="w3-card w3-white">
+      <img src="oldm.jpeg" alt="Mountains" style="width:100%">
+      <div class="w3-container">
+      
+      </div>
+      </div>
+    </div>
+    
+    </div>
+    
+    
+    <!-- Pricing Row -->
+    <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+       
+    
+    
+    <script>
+    // Script for side navigation
+    function w3_open() {
+      var x = document.getElementById("mySidebar");
+      x.style.width = "300px";
+      x.style.paddingTop = "10%";
+      x.style.display = "block";
+    }
+    
+    // Close side navigation
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+
+
+
+
+<!-- #region ------------------------------------------------------->
+
+
+</body>
+</html>

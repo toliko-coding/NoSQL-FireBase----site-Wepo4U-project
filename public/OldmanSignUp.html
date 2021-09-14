@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth()
+  const database = firebase.database()
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file --->
+
+<script src="OldmanSignUpJS.js"></script>
+
+
+<!-- JS files - end  -->
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="OldmanSignUp.css">
+
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+        <li><a href="ContactUs.html">צור קשר</a></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        <li><a href="VolenteerSignUp.html">הרשמה למתנדבים</a></li>
+        <li><a href="OldmanSignUp.html">הרשמה לקשישים</a></li>
+        <li id="Hometitle"><a href="index.html">בית</a></li>
+        
+ </nav>
+ 
+</div>
+
+<!-- NAV - BAR  END-->
+
+
+
+<!-- CONTENT -->
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="Oldman_title">הרשמה - בן אדם מבוגר</h1>
+    <div id="formContainer">
+        <div id="header"> </div> 
+
+        <fieldset id="forms__checkbox"> 
+            <input type="email" placeholder="אימייל" id="email"/>
+            <br>
+            <input type="password" placeholder="סיסמא" id="password"/>
+            <br> 
+            <input type="text" placeholder="שם פרטי" id="firstName"/>
+            <br>
+            <input type="text" placeholder="שם משפחה" id="lastName"/>   
+            <br>
+            <input type="text" placeholder="מספר פאלפון" id="phone"/> 
+            <br>
+            <input type="text" placeholder="כתובת" id="addres"/> 
+            <br>
+
+            <button onclick="signUp()" id="singUp"> הירשם </button>
+            <button onclick="signIn()" id="singIp"> התחבר </button>
+           
+            
+            <fieldset id="forms__select">
+                <legend>אנא בחר את המין שלך :</legend>
+                <p>
+                  <label for="select">Select</label>
+                  <select id="select">
+                    <optgroup label=":בחר מבין האפשרויות">
+                      <option>זכר</option>
+                      <option>נקבה</option>
+                      <option>אחר</option>
+                    </optgroup>
+                  </select>
+                </p>
+              </fieldset>
+
+              <a href="AdultTerms.html"> תקנון</a>
+              <br>
+            <input type="checkbox" id="takanon" name="takanon" value="takanon" required >
+            <label for="takanon"> אני קראתי ואני מאשר את התקנון</label><br>
+               
+                
+        </fieldset>     
+        
+    </div>
+
+    </div>
+
+
+</body>
+</html>

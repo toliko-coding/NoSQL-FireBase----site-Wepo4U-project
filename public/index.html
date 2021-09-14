@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth()
+const database = firebase.database()
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="index.js"></script>
+
+
+<!-- JS files - end  -->
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="HomePage.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+        <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        <li><a href="VolenteerSignUp.html">הרשמה למתנדבים</a></li>
+        <li><a href="OldmanSignUp.html">הרשמה לקשישים</a></li>
+        <li id="Hometitle"><a href="index.html">בית</a></li>
+       
+ </nav>
+
+</div>
+<br>
+<br>
+<br>
+<div id="numReq"></div>
+<br>
+<br>
+<br>
+<div class="w3-row-padding w3-center w3-margin-top">
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+    <h3>אני עסק ומתחבר לרעיון של המיזם </h3><br>
+    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>הגש פרטים אלינו</p>
+    <p> Wepo4U אנחנו נצרף אותך  </p>
+    <p>וגם לך נעזר להשתקם</p>
+    <p>וביחד ננסה להציל את כל אלו שנפגעו מהקורונה</p>
+    
+    <hr>
+    <a href="BusinessPage.html" class="w3-button w3-theme">אני כעסק רוצה לקחת חלק</a>
+    </div>
+  </div>
+
+  
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+    <h3>אני רוצה לעזור לאנשים</h3><br>
+    <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>הירשם והצטרף אלינו</p>
+    <p>אנחנו נמצא לך התנדבות שנוחה לך</p>
+    <p>תקבל שובר הנחה ברכישה הבאה שלך בכל אחת מרשימת העסקים שלנו</p>
+
+    <p>וביחד ננסה להציל את כל אלו שנפגעו מהקורונה</p>
+    
+    <hr>
+    <a href="VolenteerSignUp.html" class="w3-button w3-theme">אני רוצה להתנדב</a>
+    </div>
+  </div>
+  
+
+  <div class="w3-third">
+    <div class="w3-card w3-container" style="min-height:460px">
+    <h3>?איש מבוגר וצריך התנדבות</h3><br>
+    <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>הגש התנדבות לפי צרכיך </p>
+    <p>ואנחנו נמצא לך מישהו שיעזור לך</p>
+    <p>והשירות הוא חינמי ללא תשלום</p>
+    <p>וביחד ננסה להציל את כל אלו שנפגעו מהקורונה</p>
+
+    <hr>
+    <a href="OldmanSignUp.html" class="w3-button w3-theme">אני צריך עזרה</a>
+    </div>
+    
+  </div>
+  </div>
+
+
+
+
+
+  <div class="w3-center">
+    <hr>
+    <input type="text" placeholder="כניסה לאדמין" id="Admin"/>
+    <br>
+    <br>
+    
+    <a onclick="AdminIn()" class="w3-button w3-theme">כניסה לאדמין</a>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

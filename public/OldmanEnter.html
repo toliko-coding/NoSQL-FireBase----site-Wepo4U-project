@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter</title>
+
+
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="OldmanEnter.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body class="w3-light-grey">
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV -- BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        
+        <li><a href="OldmanEnter.html">הפרופיל שלי </a></li>
+        
+       
+ </nav>
+ <br>
+ <br>
+ 
+
+ <br >
+
+</div>
+
+<br>
+
+<div id="numReq"></div>
+<br>
+
+
+
+<br>
+
+<br>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <!-- Profile Image -->
+         
+         
+         
+          <p style="margin-left: 5%;"><i class="fa fa-image fa-fw w3-margin-right w3-large w3-text-teal"></i>לחץ למטה על מנת לבחור ותמונה ולאחר מכן על הכפתור הירוק </p>
+          <input type="file" id="pimage" class="buttonp">
+          <button class="buttonp2" onclick="UploadImage()">עדכן</button>
+          <img src="Logo.png" id="image" style="width:100%" alt="Avatar">
+          
+          
+        </div>
+
+       
+
+        
+        <div class="w3-container">
+          <!-- USER INFO WILL BE PRINTED HERE ! -->
+          <div id="root">
+
+          </div>  
+          <hr>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>שפות</b></p>
+          <p>עברית</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>רוסית</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>ערבית</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>בקשת ההתנדבות שלי</h2>
+        <p class="w3-light-grey w3-round-xlarge" style="margin-right: 75%;">  לחץ על נגן על מנת לשמוע הסבר</p>
+        <div><audio controls="">audio</audio></div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>הבקשה שלך כרגע היא </b></h5>
+
+            
+          <div id="reqInfo"></div>
+          
+
+          <hr>
+        </div>
+        <p class="w3-light-grey w3-round-xlarge" style="margin-left: 27%; margin-right: 27%;" >לחץ על המקש למטה על מנת לבצע סיום מוצלח של ההתנדבות</p>
+      <button  class="button" onclick="UpdateNumReq()">ההתנדבות הסתיימה בהצלחה :)</button>
+        
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>פעולות</h2>
+        <div class="w3-container">
+          <p class="w3-light-grey w3-round-xlarge" style="margin-right: 75%;">לחץ על נגן על מנת לשמוע הסבר</p>
+          <div><audio controls="">audio</audio></div>
+          <br>
+          <h5 class="w3-opacity"><b> <a href="WriteVol.html">לחץ כאן על מנת ליצור בקשה להתנדבות</a>  </b></h5>
+          
+          
+         
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b> <a href="UpdateWriteVol.html">לחץ כאן על מנת לעדכן את בקשת ההתנדבות  </a> </b></h5>
+          
+          
+          <hr>
+        </div>
+        <div class="w3-container">
+          <p>אנא כתוב כאן למטה את הסיבה שברצונך לבטל את הבקשה להתנדבות</p>
+          <p>לאחר מכן לחץ על כפתור המחיקהו</p>
+          <textarea id="textarea" rows="4" cols="48" placeholder="כתוב כאן את סיבת המחיקה "></textarea>
+          <br>
+          <button class="buttonD" id="buttonD" > מחיקה </button>
+          
+               
+          
+          
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b><a >על מנת לעדכן פרטים אנא מלא בתיבה ולחץ עדכן</a></b></h5>
+          <div>
+            <input type="text" placeholder="עדכון מספר פאלפון" id="update_phone">
+            <button id="updateBtnp" class="buttonY">עדכן טלפון</button>
+            <br>
+            <input type="text" placeholder="עדכון כתובת מגורים " id="update_addres">
+            <button id="updateBtna" class="buttonY">עדכן כתובר מגורים</button>
+            
+            <p class="w3-light-grey w3-round-xlarge" style="margin-right: 53%;">על מנת לעדכן אימייל וסיסמה אנא צור איתנו קשר בקישור למטה </p>
+            <a href="ContactUs.html"> לחץ כאן</a>
+          </div>
+          
+          <br>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+         
+          <button class="buttonL" onclick="signOut()" id="singIp"> התנתק </button>
+          <br>
+          <hr>
+        </div>
+
+
+        
+      </div>
+
+      
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by Wepo4U Company <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Wepo4U.co.il</a></p>
+</footer>
+
+
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+  const database = firebase.database();
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="OldmanEnterJS.js"></script>
+
+
+<!-- JS files - end  -->
+</body>
+</html>

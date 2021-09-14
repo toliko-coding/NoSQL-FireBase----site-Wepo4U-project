@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusinessPage</title>
+
+
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="BusinessPage.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<!-- CSS fiels  end -->
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        <li><a href="VolenteerSignUp.html">הרשמה למתנדבים</a></li>
+        <li><a href="OldmanSignUp.html">הרשמה לקשישים</a></li>
+        <li id="Hometitle"><a href="index.html">בית</a></li>
+       
+ </nav>
+ <br>
+ <br>
+ <br>
+</div>
+<br>
+<div id="numReq"></div>
+ <br>
+ <br>
+
+<button onclick="signOut()" id="singIp"> התנתק </button>
+
+<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal" style="margin-left: 22%;"></i>גלגלו יותר למטה על מנת לראות את כל העסקים שכרגע רשומים איתנו  </h2>
+
+
+<fieldset class="field" id="forms__input">
+  <legend>בוא תצרף את העסק שלך אלינו :)</legend>
+  <h3>למה כדאי לי להיצטרף ?</h3>
+  <p>
+  אצלנו באתר קיימים מתדבים שעוזרים לאנשים מדהימים ללא תמורה , על מנת לעודד אותם להמשיך ולהתנדב וי פו 4 יו מציעה פתרון נהדר , על כל התנדבות שמתבצעת המתנדב מקבל נקודה אחד , ובעזרת הנקודות האלו הלקוח ימיר את הנקודות אלו בהטבה שהעסק מציע 
+  </p>
+
+  <p>
+    <label for="Name">שם מלא</label>
+    <input id="FullName" type="text" placeholder="שם מלא">
+  </p>
+  <p>
+    <label for="input__text3" class="שם חברה">שם חברה</label>
+    <input id="Company" class="is-error" type="text" placeholder="שם החברה">
+  </p>
+
+  <p>
+    <label for="input__emailaddress">כתובת דואר אלקטרוני</label>
+    <input id="Email" type="email" placeholder="name@email.com">
+  </p>
+  <p>
+    <label for="input__phone">מספר טלפון </label>
+    <input id="Phone" type="tel" placeholder="(999) 999-9999">
+  </p>
+
+  <fieldset id="forms__textareas">
+    <legend>מה תרצו לספר על העסק שלכם?</legend>
+    <p>
+      <label for="textarea"></label>
+      <textarea id="Msg" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+    </p>
+  </fieldset>
+
+  
+  <fieldset id="forms__textareas2">
+    <legend>מה אני מציע ?</legend>
+    <p>
+      <label for="textarea"></label>
+      <textarea id="prize" rows="8" cols="48" placeholder="מה אני מציע ? "></textarea>
+      <textarea id="points" rows="1" cols="13" placeholder="תמורת כמה נקודות ?"></textarea>
+
+    </p>
+  </fieldset>
+
+
+  <a href="BusinessTerms.html"> תנאי השימוש לעסקים</a>
+  <br>
+ 
+    <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" > אני קראתי ואני מאשר את התקנון</label>
+  <button id="addBtn">Submit</button>
+  
+</fieldset>
+<br>
+
+<!-- Down here will be printed all the Bueisnesses-->
+<ul id="list">
+
+
+</ul>
+<!-- Up here will be printed all the Bueisnesses-->
+
+<h1 style="margin-left: 40%;">עסקים שכבר איתנו  </h1>
+<div id="Bdata"></div>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+  <!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="BusinessPageJS.js"></script>
+
+
+<!-- JS files - end  -->
+</body>
+</html>

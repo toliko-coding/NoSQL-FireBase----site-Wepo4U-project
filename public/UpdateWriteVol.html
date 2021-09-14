@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update request</title>
+
+
+
+<!-- CSS fiels -->
+<link rel="stylesheet" href="WriteVol.css">
+
+
+<!-- CSS fiels  end -->//
+
+
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+<!-- LOGO -->
+  <div class="Logo">
+    <img  src="Logo.png" alt="">
+</div>
+
+<br>
+
+<!-- NAV - BAR -->
+<div class="contain">
+    
+  <nav>
+    <li><a href="Aboutus.html"> קצת עלינו</a ></li>
+
+        <li><a href="ContactUs.html">צור קשר</a ></li>
+        <li><a href="CompanyPolicy.html">תנאי השימוש</a></li>
+        <li><a href="BusinessPage.html">עסקים</a></li>
+        
+        <li><a href="OldmanEnter.html">הפרופיל שלי </a></li>
+       
+ </nav>
+ <br>
+ <br>
+ <br>
+
+</div>
+<br>
+<br>
+<br>
+
+<h1 style="margin-left: 30%;"> אנא מלא את הפרטים החדשים ולחץ על כפתור הירוק למטה </h1>
+
+<div>
+  <!-- #region -->
+  <h1 style="margin-left: 45%;">עדכן איזור </h1>
+  <div id="div1" style="margin-left: 45%;">
+     
+     
+          <input type="radio" name="grp1" id="grp11" value= "כל הארץ" >1.כל הארץ</input>
+          <br>
+          <input type="radio" name="grp1" id="grp12" value="איזור הצפון">2.איזור הצפון</input>
+          <br>
+          <input type="radio" name="grp1" id="grp13" value="איזור חיפה">3.איזור חיפה</input>
+          <br>
+          <input type="radio" name="grp1" id="grp14" value="איזור השרון">4.איזור השרון</input>
+          <br>
+          <input type="radio" name="grp1" id="grp15" value="איזור ירושלים והסביבה">5.איזור ירושלים והסביבה</input>
+          <br>
+          <input type="radio" name="grp1" id="grp16" value="איזור באר שבע והסביבה">6.איזור באר שבע והסביבה</input>
+          <br>
+          <input type="radio" name="grp1" id="grp17" value="איזור הערבה">7.איזור הערבה</input>
+          <br>
+          <input type="radio" name="grp1" id="grp18" value="איזור אילת">8.איזור אילת</input>
+          
+
+  </div>
+
+  <!-- #region -->
+  <h1 style="margin-left: 45%;">עדכן שעות התנדבות </h1>
+  <div style="margin-left: 45%;">
+     
+     
+          <input type="radio" name="grp2" id="grp21" value="בוקר 8:00 - 12:00">1. 8:00 - 12:00 בוקר</input>
+          <br>
+          <input type="radio" name="grp2" id="grp22" value="צהריים 12:00 - 17:00">2. 12:00 - 17:00 צהריים</input>
+          <br>
+          <input type="radio" name="grp2" id="grp23" value="ערב 17:00 - 21:00">3. ערב 17:00 = 21:00 </input>
+          
+
+  </div>
+
+
+  <!-- #region -->
+  <h1 style="margin-left: 45%;">עדכן סוג התנדבות  </h1>
+  <div style="margin-left: 45%;">
+     
+     
+          <input type="radio" name="grp3" id="grp31" value="קניית מצרכים">1.קניית מצרכים</input>
+          <br>
+          <input type="radio" name="grp3" id="grp32" value="קניית תרופות">2.קניית תרופות</input>
+          <br>
+          <input type="radio" name="grp3" id="grp33" value="דיגיסיטר">3.דיגיסיטר</input>
+          <br>
+          <input type="radio" name="grp3" id="grp34" value="תחזוקה או שיפוץ">4.תחזוקה או שיפוץ</input>
+          <br>
+          <input type="radio" name="grp3" id="grp35" value="הסעות">5.הסעות</input>
+          <br>
+          <input type="radio" name="grp3" id="grp36" value="מחשבים ואינטרנט">6.מחשבים ואינטרנט</input>
+          
+
+  </div>
+  <br>
+  <br>
+
+  <button style="margin-left: 45%;" id="SubmitBtn" onclick="test()">לחץ כאן לעדכון הבקשה :)</button>
+</div>
+
+
+
+
+<!-- FIREBASE -------------------------------------------------------------------------------------->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAk4bsLIcI7jf9V_DqkZIo26MV4hUSPCwg",
+    authDomain: "wepo4u-team-22.firebaseapp.com",
+    projectId: "wepo4u-team-22",
+    storageBucket: "wepo4u-team-22.appspot.com",
+    messagingSenderId: "854120996905",
+    appId: "1:854120996905:web:4c6ec454ae611005797c38",
+    measurementId: "G-R8XJ878M82"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth()
+const database = firebase.database()
+</script>
+
+
+<!-- FIREBASE - end--------------------------------------------------------------------------------------- -->
+
+
+<!-- JS file -->
+
+<script src="WriteVolJS.js"></script>
+
+
+<!-- JS files - end  -->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+
+
+.contain{
+    
+    
+    margin-right: 30%;
+    
+    
+
+}
+header::after{
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+nav {
+    
+        margin-left: auto;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid red;
+        
+
+      }
+      
+      li {
+        display: inline;
+    }
+ nav {
+     float: right;
+     margin-left: 30px;
+ }
+ nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+ }
+
+ nav li {
+     display: inline-block;
+     margin-left: 70px;
+     padding-top: 50px;
+     position: relative;
+    
+
+
+ }
+ nav a {
+     color: green;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-size: 30px;
+     
+ }
+ nav a:hover{
+     color: black;
+ }
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+.Logo{
+    margin-left: 40%;
+    
+}
+nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 35%;
+  }
+
+  .p1{
+      background-color: lightslategray;
+      
+      color:rgba(0, 0, 0, 0.87);
+      margin-left: 30%;
+      margin-right: 28%;
+      
+  }
+
+
+  .buttonD {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+  .buttonp {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    margin-left: 9%;
+
+    
+  }
+  .buttonp2 {
+    background-color:green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    margin-left: 9%;
+
+    
+  }
+
+  .buttonL {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+
+  .welcomeh{
+      margin-left: 30%;
+      font-size: 80px;
+  }
+
+  .name{
+      font-size: 40px;
+      margin-left: 30%;
+  }
+
+  .buttonY {
+    background-color: #FFFF66;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
